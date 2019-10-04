@@ -1,6 +1,6 @@
 FROM node:alpine as builder
 WORKDIR '/app'
-COPY package.json .
+COPY package*.json ./
 RUN npm config set proxy http://pjsevilla:Septiembre2019@proxy.indra.es:8080
 RUN npm install
 COPY . .
